@@ -1,17 +1,17 @@
 import { Component, NO_ERRORS_SCHEMA, inject } from '@angular/core'
 import { NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular'
 import { Page } from '@nativescript/core'
-import { ItemService } from './item.service'
 
 @Component({
-  selector: 'ns-items',
-  templateUrl: './items.component.html',
+  selector: 'ns-counter',
+  templateUrl: './counter.component.html',
   imports: [NativeScriptCommonModule, NativeScriptRouterModule],
+  styleUrls: ['./counter.component.css'],
   schemas: [NO_ERRORS_SCHEMA],
 })
-export class ItemsComponent {
-  itemService = inject(ItemService)
+export class CounterComponent {
   page = inject(Page)
+  counter: number = 0
 
   constructor() {
     // Setup large titles on iOS
@@ -21,5 +21,9 @@ export class ItemsComponent {
         navigationController.navigationBar.prefersLargeTitles = true
       }
     })
+  }
+
+  incrementCounter() {
+    this.counter++
   }
 }

@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "apps.apptrtotter.nativescriptuniversallink.com",
+        "sha256_cert_fingerprints":
+        ["B8:7B:AD:01:A9:8D:1C:34:19:7D:53:F3:16:4A:0D:39:07:5C:4F:54:D5:CE:76:F7:38:DB:FB:B8:38:42:E0:60"]
+      }
+    }
+  ]
+  

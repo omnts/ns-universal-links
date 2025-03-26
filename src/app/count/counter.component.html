@@ -1,0 +1,8 @@
+<ActionBar title="Change Counter"> </ActionBar>
+
+<GridLayout rows="*,auto" columns="*,auto, *">
+    <label row="0" col="1" [text]="this.counter" class="counter" text="center" horizontalAlignment="center">
+    </label>
+    <Button row="1" col="1" text="center" horizontalAlignment="center" marginBottom="20" text="+" horizontalAlignment="left"
+        (tap)="incrementCounter()" class="button"></Button>
+</GridLayout>

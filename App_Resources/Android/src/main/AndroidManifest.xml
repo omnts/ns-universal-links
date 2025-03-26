@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="__PACKAGE__">
+	package="apps.apptrtotter.nativescriptuniversallink.com">
 
 	<supports-screens
 		android:smallScreens="true"
@@ -36,6 +36,20 @@
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
+
+            <intent-filter android:autoVerify="true">
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<data android:scheme="http" />
+				<data android:scheme="https" />
+
+				<data android:host="apps.apptrotter.com" />
+				<data android:pathPrefix="" />
+				<data android:pathPattern="*" />
+			</intent-filter>
+
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
 	</application>

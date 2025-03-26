@@ -8,3 +8,5 @@ creater-project-command:
 install-universal-link-plugin:
 	ns plugin add @nativescript-community/universal-links
 
+debug-android:
+	tns debug android

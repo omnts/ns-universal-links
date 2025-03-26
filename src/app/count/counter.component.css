@@ -1,0 +1,17 @@
+
+.button {
+    margin: 15 0 0 15;
+    background-color: white;
+    color: black;
+    width: 145;
+    border-radius: 25;
+    font-weight: 600;
+    font-size: 30;
+  }
+
+.counter {
+    margin: 15 0 0 15;
+    color: black;
+    font-weight: 600;
+    font-size: 120;
+}
