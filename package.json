@@ -1,7 +1,7 @@
 {
   "name": "nativescript-universal-link",
   "main": "./src/main.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.0.0",

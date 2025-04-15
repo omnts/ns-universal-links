@@ -10,3 +10,9 @@ install-universal-link-plugin:
 
 debug-android:
 	tns debug android
+
+debug-ios:
+	tns debug ios
+
+uninstall:
+	adb uninstall apps.apptrtotter.nativescriptuniversallink.com

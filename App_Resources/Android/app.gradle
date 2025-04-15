@@ -1,6 +1,6 @@
-// You can add your native dependencies here
 dependencies {
-//  implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'co.datadome.sdk:sdk:1.15.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
 
 android {
@@ -11,15 +11,27 @@ android {
   defaultConfig {
     minSdkVersion 23
     targetSdkVersion 34
-
-    // Version Information
-    versionCode 1
-    versionName "1.0.0"
     
     generatedDensities = []
   }
 
   aaptOptions {
     additionalParameters "--no-version-vectors"
+  }
+}
+
+// See the doc for Usage of https://docs.gradle.org/current/userguide/resolution_rules.html
+allprojects {
+  
+  repositories {
+    mavenCentral()
+  }
+    
+  configurations.all {
+    resolutionStrategy.dependencySubstitution {
+      substitute(module("com.tapadoo.android:alerter:6.1.0"))
+      .using(module("com.github.tapadoo:alerter:7.2.4"))
+      .because("JCenter deprecated and 6.1.0 not available in others repos")
+    }
   }
 }
